@@ -1,14 +1,32 @@
-# Welcome to your CDK TypeScript project
+# Getting Started with AWS DocumentDB
 
-This is a blank project for CDK development with TypeScript.
+What We'll Cover
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+- What is a document database and AWS' managed offering
+- How can we set one up using AWS CDK (IAC)
 
-## Useful commands
+Then once we have an database up and running:
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+- How can we connect and view from a GUI; MongoDB Compass
+- How can we run migrations and seed data in the database
+- How can we connect to it using an AWS Lambda function
+
+## High Level
+
+Our example database will be an international address normalisation piece that can be consumed by our in-house engineering domain teams to capture and display addresses and convert addresses from integrated products into a company address model.
+
+![address model high level](./docs/doc-db-high-level.png)
+
+## Technical Architecture
+
+### Basic
+
+![Simple Lambda to DocDB](./docs/doc-db-1.png)
+
+### Connecting via MongoDB Compass GUI
+
+![Connecting via Compass GUI](./docs/doc-db-2.png)
+
+### Running Migrations from Lambda
+
+![Running Migrations from Lambda](./docs/doc-db-3.png)
