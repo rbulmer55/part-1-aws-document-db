@@ -1,0 +1,40 @@
+{
+	"jsc": {
+		"parser": {
+			"syntax": "typescript",
+			"decorators": true,
+			"dynamicImport": true
+		},
+		"target": "es2021",
+		"keepClassNames": true,
+		"loose": true,
+		// Important part bellow, copy it from your tsconfig.json
+		"baseUrl": ".",
+		"paths": {
+			"@adapters/*": ["src/adapters/*"],
+			"@infra/*": ["infra/*"],
+			"@mocks/*": ["__mocks__/*"],
+			"@config/*": ["src/config/*"],
+			"@domain/*": ["src/domain/*"],
+			"@entity/*": ["src/entity/*"],
+			"@errors/*": ["src/errors/*"],
+			"@schemas/*": ["src/schemas/*"],
+			"@shared/*": ["src/shared/*"],
+			"@shared": ["src/shared"],
+			"@dto/*": ["src/dto/*"],
+			"@dto": ["src/dto"],
+			"@models/*": ["src/models/*"],
+			"@models": ["src/models"],
+			"@repositories/*": ["src/repositories/*"],
+			"@constants/*": ["src/constants/*"],
+			"@test-utils": ["test/utils"],
+			"@use-cases/*": ["src/use-cases/*"],
+			"@use-cases": ["src/use-cases"]
+		}
+		// Important part above, copy it from your tsconfig.json
+	},
+	"module": {
+		"type": "commonjs"
+	},
+	"sourceMaps": true
+}

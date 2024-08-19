@@ -1,0 +1,50 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "normalisedAddress Object",
+	"type": "object",
+	"description": "Schema definition for the normalisedAddress object, detailing its properties and constraints.",
+	"properties": {
+		"country": {
+			"type": "object",
+			"properties": {
+				"country2Code": { "type": "string" },
+				"country3Code": { "type": "string" },
+				"countryId": { "type": "number" },
+				"countryName": { "type": "string" }
+			},
+			"required": ["country2Code"]
+		},
+		"updatedBy": {
+			"type": "string",
+			"description": "Reference to the user who last updated the normalisedAddressObject."
+		},
+		"updatedAt": {
+			"type": "string",
+			"format": "date-time",
+			"description": "Timestamp marking when the normalisedAddress object was last updated, formatted as a date-time string."
+		},
+		"properties": {
+			"type": "array",
+			"description": "NormalisedAddress properties",
+			"items": {
+				"type": "object",
+				"properties": {
+					"propertyName": { "type": "string" },
+					"name": { "type": "string" },
+					"label": { "type": "string" },
+					"isRequired": { "type": "boolean" },
+					"entryOrder": { "type": "number" }
+				},
+				"required": [
+					"propertyName",
+					"name",
+					"label",
+					"isRequired",
+					"entryOrder"
+				]
+			}
+		}
+	},
+	"required": ["country", "updatedBy", "updatedAt", "properties"],
+	"additionalProperties": false
+}

@@ -1,0 +1,41 @@
+{
+	"extends": "./node_modules/gts/tsconfig-google.json",
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": false,
+		"esModuleInterop": true,
+		"noUnusedParameters": false,
+		"resolveJsonModule": true,
+		"inlineSourceMap": false,
+		"inlineSources": true,
+		"experimentalDecorators": true,
+		"strictPropertyInitialization": false,
+		"typeRoots": ["./node_modules/@types"],
+		"baseUrl": ".",
+		"paths": {
+			"@adapters/*": ["src/adapters/*"],
+			"@infra/*": ["infra/*"],
+			"@mocks/*": ["__mocks__/*"],
+			"@config/*": ["src/config/*"],
+			"@domain/*": ["src/domain/*"],
+			"@entity/*": ["src/entity/*"],
+			"@errors/*": ["src/errors/*"],
+			"@schemas/*": ["src/schemas/*"],
+			"@shared/*": ["src/shared/*"],
+			"@shared": ["src/shared"],
+			"@dto/*": ["src/dto/*"],
+			"@dto": ["src/dto"],
+			"@models/*": ["src/models/*"],
+			"@models": ["src/models"],
+			"@repositories/*": ["src/repositories/*"],
+			"@constants/*": ["src/constants/*"],
+			"@test-utils": ["test/utils"],
+			"@use-cases/*": ["src/use-cases/*"],
+			"@use-cases": ["src/use-cases"]
+		}
+	},
+	"exclude": ["node_modules", "cdk.out"]
+}
