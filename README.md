@@ -1,5 +1,7 @@
 # Getting Started with AWS DocumentDB
 
+[https://blog.architechinsights.com/documentdb-part-1-getting-started-with-aws-and-the-cdk-2ca6e504ae13](https://blog.architechinsights.com/documentdb-part-1-getting-started-with-aws-and-the-cdk-2ca6e504ae13)
+
 What We'll Cover
 
 - What is a document database and AWS' managed offering
